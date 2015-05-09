@@ -1,8 +1,778 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+/**, *:before, *:after {*/
+  /*-moz-box-sizing: border-box;*/
+  /*-webkit-box-sizing: border-box;*/
+  /*box-sizing: border-box;*/
+/*}*/
+
+/*body {*/
+  /*background: #eee;*/
+  /*font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;*/
+  /*font-height: 17px;*/
+/*}*/
+
+/*#container {*/
+  /*width: 980px;*/
+  /*margin: 0 auto;*/
+  /*background: #fff;*/
+  /*border-radius: 4px;*/
+/*}*/
+
+/*#header {*/
+  /*padding: 2em;*/
+/*}*/
+/*#header h1 {*/
+  /*margin: 0;*/
+  /*font-size: 5em;*/
+/*}*/
+/*#header h1 em {*/
+  /*color: #ed5;*/
+/*}*/
+
+/*#main {*/
+  /*padding: 0 2em 2em 2em;*/
+/*}*/
+/*#main section {*/
+  /*margin-bottom: 2em;*/
+/*}*/
+/*#main h3 {*/
+  /*margin-top: 0;*/
+/*}*/
+/*#main form .entry {*/
+  /*margin-bottom: 1em;*/
+  /*line-height: 1.5em;*/
+/*}*/
+/*#main form .entry input,*/
+/*#main form .entry textarea {*/
+  /*padding: 0.3em;*/
+/*}*/
+/*#main form .entry label {*/
+  /*display: block;*/
+/*}*/
+/*#main form .entry label .title {*/
+  /*display: block;*/
+/*}*/
+
+/*#main .new form .entry.title input {*/
+  /*width: 50em;*/
+/*}*/
+/*#main .new form .entry.body textarea {*/
+  /*width: 50em;*/
+  /*height: 10em;*/
+/*}*/
+/*#main .new form button {*/
+  /*font-size: 1.5em;*/
+  /*padding: 0.3em 1em;*/
+  /*border-radius: 0.4em;*/
+/*}*/
+/*#main .alerts {*/
+  /*display: none;*/
+/*}*/
+/*#main .alerts > div {*/
+  /*padding: 0 0 1em 0;*/
+/*}*/
+/*#main .alerts .error {*/
+  /*color: red;*/
+/*}*/
+/*#main .alerts .info {*/
+  /*color: #6d6;*/
+/*}*/
+/*#main .latest .texts .message {*/
+  /*margin: 1em 0;*/
+  /*padding-bottom: 0.7em;*/
+  /*border: 1px solid #ddd;*/
+/*}*/
+/*#main .latest .texts .message:nth-child(n+5) {*/
+  /*display: none;*/
+/*}*/
+/*#main .latest .texts .message > h4 {*/
+  /*margin: 0;*/
+  /*padding: 0.4em;*/
+  /*background: #eee;*/
+  /*border-bottom: 1px solid #ddd;*/
+/*}*/
+/*#main .latest .texts .message .meta {*/
+  /*float: right;*/
+  /*padding: 0.4em 0.4em 0 0;*/
+  /*color: #777;*/
+/*}*/
+/*#main .latest .texts .message p {*/
+  /*margin: 0.5em;*/
+/*}*/
+/*#main .latest .texts .message .comments {*/
+  /*width: 500px;*/
+  /*margin-left: 2em;*/
+  /*font-size: 85%;*/
+/*}*/
+/*#main .latest .texts .message .comments h4 {*/
+  /*margin: 0;*/
+  /*padding: 0.4em;*/
+/*}*/
+/*#main .latest .texts .message .comments .comment {*/
+  /*border-top: 1px dotted #aaa;*/
+/*}*/
+/*#main .latest .texts .message .comments .new-comment .entry {*/
+  /*margin-bottom: 0;*/
+/*}*/
+/*#main .latest .texts .message .comments .new-comment textarea {*/
+  /*width: 20em;*/
+  /*height: 4em;*/
+/*}*/
+
+/*#footer {*/
+  /*margin-top: 2em;*/
+  /*padding: 0.5em;*/
+  /*background: #9b9;*/
+  /*color: #fff;*/
+  /*text-align: center;*/
+/*}*/
+/*####################*/
+/*.cloudBody {*/
+  /*border: 1px solid #7AA23F;*/
+  /*box-shadow: 0px 1px 0px #D5D5D5;*/
+  /*border: 1px solid #9f9f9f\9;*/
+  /*background-color: #B2CF73;*/
+/*}*/
+
+.cloudPannel {
+  position: relative;
+  _position: static;
 }
 
-a {
-  color: #00B7FF;
+.me .cloudText .cloudContent {
+  vertical-align: top;
+}
+
+.me .sendStatus {
+  position: absolute;
+  left: -250px;
+  color: #B8B8B8;
+  top: 50%;
+  width: 250px;
+  text-align: right;
+  margin-top: -9px;
+  font-size: 12px;
+}
+
+.chatItem {
+  padding: 4px 0px 10px 0px;
+  _background: none;
+  _border: none;
+}
+
+.chatItem .time {
+  font-size: 12px;
+  padding: 2px 0;
+  margin: 0px auto 10px;
+  width: 100px;
+  border-radius: 20px;
+  color: #7f7f7f;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.chatItem .time .timeBg {
+  height: 1px;
+  width: 27px;
+  margin-top: 8px;
+  background-color: #B4B8BD;
+}
+
+.chatItemContent {
+  cursor: pointer;
+}
+
+.chatItem .cloud {
+  padding: 0px;
+  margin: 0px;
+  max-width: 300px;
+  cursor: default;
+  position: static;
+}
+
+.me {
+  float: right;
+  width: 100%;
+}
+
+.chatItem {
+  padding: 4px 0px 10px;
+}
+.chatPanel {
+  position: relative;
+  margin: 0px auto;
+  padding: 40px 0px 30px;
+  width: 962px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.chatPanel .panelBackground {
+  position: absolute;
+  top: 180px;
+  right: 253px;
+  color: rgb(53, 57, 60);
+  font-size: 24px;
+  text-shadow: rgb(83, 83, 83) 0px 1px 1px;
+  z-index: 1;
+}
+
+.chatPanel .content {
+  position: relative;
+  z-index: 2;
+}
+
+.chatPanel .list {
+  position: relative;
+  float: left;
+  width: 276px;
+  border-radius: 6px;
+  z-index: 99;
+  border: 1px solid rgb(66, 68, 72);
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  box-shadow: rgb(49, 49, 49) 0px 2px 6px;
+}
+
+.chatPanel .list .top {
+  border-top: 1px solid rgb(155, 163, 174);
+  border-bottom: 1px solid rgb(51, 51, 51);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(107, 120, 136)), color-stop(0.1, rgb(106, 119, 134)), color-stop(0.5, rgb(94, 105, 119)), color-stop(0.9, rgb(86, 97, 109)), to(rgb(84, 94, 106)), to(rgb(84, 94, 106)));
+  border-radius: 3px 3px 0px 0px;
+}
+
+.chatPanel .list .top .title {
+  height: 39px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.chatPanel .myProfile {
+  width: 100%;
+  display: block;
+}
+
+.chatPanel .myProfile .avatar {
+  position: absolute;
+  top: -26px;
+  left: 5px;
+  width: 68px;
+  height: 68px;
+  background: url(https://res.wx.qq.com/en_US/htmledition/images/border_myprofile_avatar1844c2.png) no-repeat;
+  z-index: 101;
+}
+
+.chatPanel .myProfile a {
+  text-decoration: none;
+}
+.myProfile .unreadTotalCount {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 47px;
+  top: 21px;
+  background: url(https://res.wx.qq.com/en_US/htmledition/images/button_chat20067a.png) -5px -670px no-repeat;
+  z-index: 110;
+  color: rgb(93, 73, 20);
+  text-shadow: rgb(32, 37, 43) 0px 1px 0px;
+  line-height: 27px;
+  font-size: 12px;
+}
+
+.chatPanel .activeChatVernier {
+  position: absolute;
+  top: 153px;
+  width: 34px;
+}
+
+.chatPanel .chat {
+  margin-left: 312px;
+  border-radius: 6px;
+  box-shadow: rgb(49, 49, 49) 0px 2px 6px;
+  z-index: 20;
+}
+.lightBorder {
+  border-color: rgb(221, 221, 221);
+}
+
+.chatPanel .chatContainer {
+  position: relative;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border: 1px solid rgb(66, 68, 72);
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  overflow: hidden;
+}
+
+.chatPanel .rightOpBtn {
+  right: 0px;
+}
+.chatPanel .backToChat, .chatPanel .rightOpBtn {
+  width: 59px;
+  height: 46px;
+  margin-top: 1px;
+  position: absolute;
+  top: 0px;
+}
+
+.chatPanel .chatMainPanel {
+  position: absolute;
+  width: 100%;
+  border-radius: 2px 2px 6px 6px;
+}
+
+.chatPanel .chatTitle {
+  height: 40px;
+  border-top: 1px solid rgb(155, 163, 174);
+  border-bottom: 1px solid rgb(51, 51, 51);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(107, 120, 136)), color-stop(0.1, rgb(106, 119, 134)), color-stop(0.5, rgb(94, 105, 119)), color-stop(0.9, rgb(86, 97, 109)), to(rgb(84, 94, 106)), to(rgb(84, 94, 106)));
+  position: relative;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.chatPanel .chatNameWrap {
+  border-radius: 6px 6px 0px 0px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.chatPanel .chatNameWrap .chatName {
+  margin: 0px auto;
+  width: 400px;
+  white-space: nowrap;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-top: 10px;
+  font-size: 14px;
+  font-family: 微软雅黑;
+  color: rgb(255, 255, 255);
+  text-shadow: none;
+}
+
+.chatPanel .chatScorll {
+  height: 390px;
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  background-color: rgb(239, 243, 247);
+}
+
+.chatPanel .chatContent {
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.chatItem .time {
+  font-size: 12px;
+  padding: 2px 0px;
+  margin: 0px auto 10px;
+  width: 100px;
+  border-radius: 20px;
+  color: rgb(127, 127, 127);
+  text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+}
+
+.chatItem .time .timeBg {
+  height: 1px;
+  width: 27px;
+  margin-top: 8px;
+  background-color: rgb(180, 184, 189);
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+.me .cloud {
+  float: right;
+  min-width: 50px;
+  max-width: 300px;
+  margin: 0px 15px 0px 0px;
+}
+.chatItem .cloud {
+  padding: 0px;
+  margin: 0px;
+}
+.chatItem .cloud {
+  max-width: 300px;
+  cursor: default;
+  position: static;
+}
+
+.cloudPannel {
+  position: relative;
+}
+
+.me .cloudText .sendStatus {
+  margin-top: -10px;
+}
+.me .sendStatus {
+  position: absolute;
+  left: -250px;
+  color: rgb(184, 184, 184);
+  top: 50%;
+  width: 250px;
+  text-align: right;
+  margin-top: -9px;
+  font-size: 12px;
+}
+
+.me .cloudText .cloudBody {
+  margin-left: 8px;
+}
+.me .cloudBody {
+  border: 1px solid rgb(122, 162, 63);
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  box-shadow: rgb(213, 213, 213) 0px 1px 0px;
+  background-color: rgb(178, 207, 115);
+}
+
+.me .cloudContent {
+  border-top: 1px solid rgb(220, 230, 200);
+  border-bottom: 1px solid rgb(185, 207, 139);
+  border-left: 1px solid rgb(204, 222, 163);
+  padding: 7px 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  overflow: hidden;
+  color: rgb(0, 0, 0);
+  text-shadow: none;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(205, 235, 150)), color-stop(0.1, rgb(180, 209, 116)), color-stop(0.3, rgb(178, 207, 115)), color-stop(0.5, rgb(175, 204, 116)), color-stop(0.7, rgb(171, 202, 108)), color-stop(0.9, rgb(169, 197, 114)), to(rgb(164, 195, 99)), to(rgb(164, 195, 99)));
+}
+
+.me .cloudText .cloudArrow {
+  position: absolute;
+  right: -12px;
+  top: 11px;
+  width: 13px;
+  height: 24px;
+  background: url(../images/me.png) no-repeat;
+}
+
+.me .avatar {
+  float: right;
+  margin-right: 18px;
+}
+.chatItem .avatar {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgb(255, 255, 255);
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  box-shadow: rgb(179, 182, 186) 0px 1px 0px;
+}
+
+.chatPanel .chatOperator {
+  position: relative;
+  text-align: left;
+  border-top: 1px solid rgb(128, 131, 132);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(248, 249, 250)), to(rgb(218, 221, 223)));
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: rgb(56, 62, 69);
+  height: 55px;
+}
+.lightBorder {
+  border-color: rgb(221, 221, 221);
+}
+.chatPanel .inputArea {
+  padding: 14px 10px 0px 5px;
+  height: 43px;
+}
+
+.chatPanel .inputArea .attach {
+  float: left;
+}
+
+.chatPanel .inputArea .attach a.expression:link, .chatPanel .inputArea .attach a.expression:visited {
+  background-position: 3px -1px;
+}
+.chatPanel .inputArea .attach a.expression:link, .chatPanel .inputArea .attach a.expression:visited {
+  background-position: 3px -1px;
+}
+.left {
+  float: left;
+}
+
+.chatPanel .inputArea .attach a.file:link, .chatPanel .inputArea .attach a.file:visited {
+  background-position: 0px -34px;
+}
+.chatPanel .inputArea .attach a.file:link, .chatPanel .inputArea .attach a.file:visited {
+  background-position: 0px -34px;
+}
+.chatPanel .inputArea .attach a.func {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin-right: 2px;
+  float: left;
+  background: url(https://res.wx.qq.com/en_US/htmledition/images/button_chat20067a.png) 0px 0px no-repeat;
+  text-decoration: none;
+}
+
+.chatPanel .chatInput {
+  float: left;
+  width: 402px;
+  height: 20px;
+  margin: 0px 10px;
+  padding: 7px 10px 2px;
+  outline: none;
+  box-shadow: rgb(187, 187, 187) 1px 1px 2px inset;
+  background: rgb(238, 238, 238);
+  border-radius: 2px;
+  border: none;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  font: 14px/1.2em Helvetica, 微软雅黑, 黑体, Arial, Tahoma;
+  resize: none;
+}
+.lightBorder {
+  border-color: rgb(221, 221, 221);
+}
+
+a.chatSend {
+  display: block;
+  float: right;
+  height: 28px;
+  width: 80px;
+  margin: 0px 1px 1px 0px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgb(41, 68, 126);
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  box-shadow: rgb(217, 217, 217) 0px 1px 3px;
+  text-shadow: rgb(68, 68, 68) 0px 1px 1px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(96, 120, 170)), color-stop(0.1, rgb(94, 118, 167)), color-stop(0.5, rgb(84, 107, 156)), color-stop(0.9, rgb(73, 95, 143)), to(rgb(70, 92, 140)), to(rgb(70, 92, 140)));
+}
+
+.chatPanel .recordInput {
+  border: none;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  box-shadow: none;
+  padding: 0px;
+  height: 31px;
+  width: 385px;
+}
+.chatPanel .chatInput {
+  float: left;
+  width: 402px;
+  height: 20px;
+  margin: 0px 10px;
+  padding: 7px 10px 2px;
+  outline: none;
+  box-shadow: rgb(187, 187, 187) 1px 1px 2px inset;
+  background: rgb(238, 238, 238);
+  border-radius: 2px;
+  border: none;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  font: 14px/1.2em Helvetica, 微软雅黑, 黑体, Arial, Tahoma;
+  resize: none;
+}
+
+.clr {
+  clear: both;
+  height: 1px;
+  overflow: hidden;
+  display: block;
+}
+
+.chatPanel .chatInput {
+  float: left;
+  width: 402px;
+  height: 20px;
+  margin: 0px 10px;
+  padding: 7px 10px 2px;
+  outline: none;
+  box-shadow: rgb(187, 187, 187) 1px 1px 2px inset;
+  background: rgb(238, 238, 238);
+  border-radius: 2px;
+  border: none;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  font: 14px/1.2em Helvetica, 微软雅黑, 黑体, Arial, Tahoma;
+  resize: none;
+}
+
+.emojiPanel {
+  position: absolute;
+  zoom: 1;
+  z-index: 120;
+}
+
+.chatPanel .dragUploaderPanel {
+  margin: -189px 0px 0px;
+}
+
+.you {
+  float: left;
+  width: 100%;
+  _background: none;
+  _border: none;
+}
+.chatItem {
+  padding: 4px 0px 10px 0px;
+  _background: none;
+  _border: none;
+}
+
+.you .avatar {
+  float: left;
+}
+
+.you .cloudBody {
+  border: 1px solid #AFAFAF;
+  box-shadow: 0px 1px 0px #D5D5D5;
+  border: 1px solid #9f9f9f\9;
+  border-radius: 6px\9;
+  background-color: #ECECEC;
+}
+.chatItem .cloudBody {
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.you .cloudText .sendStatus {
+  margin-top: -8px;
+}
+.you .sendStatus {
+  position: absolute;
+  top: 50%;
+  right: -198px;
+  margin-top: -23px;
+  width: 200px;
+  text-align: left;
+  font-size: 12px;
+  color: #B8B8B8;
+  background: none;
+}
+
+.you .cloud {
+  float: left;
+  min-width: 50px;
+  max-width: 300px;
+  margin: 0 0 0 15px;
+}
+.chatItem .cloud {
+  /* position: relative; */
+  padding: 0px;
+  margin: 0px;
+}
+.chatItem .cloud {
+  max-width: 300px;
+  cursor: default;
+  position: static;
+}
+.you .cloudBody {
+  border: 1px solid #AFAFAF;
+  box-shadow: 0px 1px 0px #D5D5D5;
+  border: 1px solid #9f9f9f\9;
+  border-radius: 6px\9;
+  background-color: #ECECEC;
+}
+.chatItem .cloudBody {
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.you .cloudContent {
+  padding: 5px 13px\9;
+  padding: 7px 10px;
+  color: #030303;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #F2F2F2;
+  border-right: 1px solid #F2F2F2;
+  background-color: #ECECEC\9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e5e5e5), color-stop(0.1, #f3f3f3), color-stop(0.3, #f1f1f1), color-stop(0.5, #ececec), color-stop(0.7, #e9e9e9), color-stop(0.9, #e6e6e6), color-stop(1, #e5e5e5));
+  background-image: -moz-linear-gradient(top, #f3f3f3 10%, #f1f1f1 30%, #ececec 50%, #e9e9e9 70%, #e6e6e6 90%, #e5e5e5 100%);
+}
+.chatItem .cloudContent {
+  border-radius: 13px\9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-shadow: none;
+}
+.chatItem .cloudContent {
+  text-align: left;
+  font-weight: normal;
+  font-size: 14px;
+  min-height: 20px;
+  word-wrap: break-word;
+}
+
+.you .cloudText .cloudArrow {
+  position: absolute;
+  left: -7px;
+  top: 11px;
+  width: 13px;
+  height: 24px;
+  background: url(../images/you.png) no-repeat;
+}
+
+.chatItem .avatar {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ccc\9;
+  border: 1px solid #FFF;
+  box-shadow: 0px 1px 0px #B3B6BA;
 }

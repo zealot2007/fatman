@@ -1,0 +1,100 @@
+<!doctype html >
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fatman</title>
+    <link rel="stylesheet" href="/stylesheets/tinyscrollbar.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <script type="text/javascript" src="/javascripts/libs/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/javascripts/libs/jquery.tinyscrollbar.js"></script>
+    <script type="text/javascript" src="/javascripts/libs/socket.io.js"></script>
+    <script type="text/javascript" src="/javascripts/common.js"></script>
+    <script type="text/javascript" src="/javascripts/room.js"></script>
+  </head>
+  <body>
+    <div id="container" style="rgba(0,0,0,0.5);">
+      <div id='chat' class='chatPanel normalPanel'>
+      <div class="content">
+        <div class="chat lightBorder" style="visibility: visible;">
+          <div class="chatContainer" style="height: 590px;">
+        <div class='chatMainPanel' id='chatMainPanel'>
+          <div class="chatTitle">
+            <div class="chatNameWrap">
+              <form id="closeForm" action="/signin/clear" method="post">
+                <img id="closeIcon" src="/images/close2.png" class="closeIcon" height='20px'>
+              </form>
+              <p class="chatName" id="messagePanelTitle">Welcome to Fatman</p>
+            </div>
+          </div>
+          <div id="scrollbar1" styple="width: 100%; height: 490px; overflow-y: hidden; position: relative;">
+            <div class="scrollbar" style="height: 300px;">
+              <div class="track" style="height: 300px;">
+                <div class="thumb" style="top: 0px; height: 121.293800539084px;">
+                  <div class="end"></div>
+                </div>
+              </div>
+            </div>
+            <div class="viewport" style="height: 490px; overflow-y: hidden; position: relative;">
+              <div id="chat-chatmsglist" class="overview chatContent" style="top: 0px; position: absolute;">
+
+
+                <% if (locals.messages.length != 0) { %>
+                  <% locals.messages.forEach(function(msg) {  %>
+                    <% var m = msg.serialize(); %>
+                    <% var isMe = (m.sender_id === parseInt(locals.user_id)) ? 'me' : 'you'; %>
+                    <div class="chatItem <%= isMe %>" sender-id='<%= m.sender_id %>'>
+                      <div class="chatItemContent">
+                        <img class="avatar" src="/images/avatar.png" height='40px' width='40px' username="">
+                        <div class="cloud cloudText" un="cloud_1029300659" msgid="1029300659">
+                          <div class="cloudPannel" style="">
+                            <div class="sendStatus"></div>
+                            <div class="cloudBody">
+                              <div class="cloudContent">
+                                <%= m.body %>
+                              </div>
+                            </div>
+                            <div class="cloudArrow "></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                <% }); %>
+                <% }; %>
+
+              </div>
+            </div>
+          </div>
+
+        <div id="chat_editor" class="chatOperator lightBorder" ctrl="1">
+          <div class="inputArea">
+            <form id="newm">
+              <input id='room_id' type='hidden' value='<%= locals.id %>'>
+              <textarea type="text" id="textInput" class="chatInput lightBorder">
+              </textarea>
+              <a href="javascript:void();" class="chatSend" click="sendMsg@.inputArea">
+                <b>Send</b>
+              </a>
+            </form>
+            <div id="recordInput" class="recordInput chatInput" style="display:none;">
+            </div>
+            <div class="clr">
+            </div>
+            <textarea type="text" id="textInput" class="chatInput lightBorder" style="visibility: hidden; position: absolute; left: -1000px; padding: 0px 10px; width: 402px; overflow: hidden;">
+            </textarea>
+          </div>
+          <div class="dragUploaderPanel" id="dragPanel" style="display:none;">
+            <div intxt="Release mouse button" outtxt="Drag your file here to send" style="text-align:center;">
+            </div>
+          </div>
+          <div class="emojiPanel" style="display:none;" id="emojiPanel"></div>
+        </div>  <!--chat_editor-->
+        </div>
+        </div>
+          </div>  <!--chatContainer-->
+        </div>   <!--chat lightBorder-->
+      </div>  <!--content-->
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
